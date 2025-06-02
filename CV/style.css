@@ -1,0 +1,161 @@
+/* Styles CSS pour le CV */
+* {
+  max-width: 700px;
+  margin: auto;
+}
+
+body {
+    font-family: 'Arial', sans-serif; /* Police plus standard */
+    line-height: 1.6;
+    margin: 0; /* Supprimer la marge par défaut du body */
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    padding-top: 50px; /* Espace pour le header fixe */
+    padding-bottom: 60px; /* Espace pour le footer */
+}
+
+div {
+  border-radius: 5px;
+}
+
+#header {
+  height: 40px;
+  width: 100%;
+  background-color: #333; /* Couleur plus sobre */
+  position: fixed;
+  top: 0; /* Aligner en haut */
+  left: 0; /* Aligner à gauche */
+  z-index: 1000; /* S'assurer qu'il est au-dessus des autres éléments */
+  max-width: none; /* Permettre au header de prendre toute la largeur */
+}
+
+#footer {
+  height: 50px;
+  width: 100%;
+  background-color: #333; /* Couleur plus sobre */
+  clear: both;
+  position: fixed; /* Fixer le footer en bas */
+  bottom: 0; /* Aligner en bas */
+  left: 0; /* Aligner à gauche */
+  z-index: 1000;
+  max-width: none; /* Permettre au footer de prendre toute la largeur */
+}
+
+.left {
+  height: 100%; /* Ajuster pour couvrir la hauteur de la fenêtre */
+  width: 45px;
+  background-color: #e0eeee;
+  float: left;
+  position: fixed; /* Fixer sur le côté */
+  top: 40px; /* Commencer après le header */
+  bottom: 50px; /* Terminer avant le footer */
+  left: 0;
+  z-index: 1;
+}
+
+.right {
+  height: 100%; /* Ajuster pour couvrir la hauteur de la fenêtre */
+  width: 45px;
+  background-color: #e0eeee;
+  float: right;
+  position: fixed; /* Fixer sur le côté */
+  top: 40px; /* Commencer après le header */
+  bottom: 50px; /* Terminer avant le footer */
+  right: 0;
+  z-index: 1;
+}
+
+.stuff {
+  display: inline-block;
+  margin-top: 6px;
+  margin-left: 55px; /* Espace pour la barre latérale gauche */
+  margin-right: 55px; /* Espace pour la barre latérale droite */
+  /* width: calc(100% - 110px); */ /* Calculer la largeur en fonction des barres latérales */
+  /* height: auto; */ /* Laisser la hauteur s'adapter au contenu */
+  padding-bottom: 20px; /* Espace en bas du contenu */
+  max-width: calc(700px - 110px); /* Ajuster max-width pour le contenu central */
+}
+
+h1, h2 {
+    color: #333;
+}
+
+p,
+li {
+  font-family: 'Arial', sans-serif; /* Utiliser la même police que le body */
+}
+
+.head {
+  font-size: 20px;
+  font-weight: bold; /* Rendre les titres de section plus visibles */
+  margin-top: 20px; /* Ajouter de l'espace avant les titres de section */
+  margin-bottom: 10px;
+}
+
+ul {
+    list-style-type: disc; /* Style de puce standard */
+    padding-left: 20px; /* Indentation pour les listes */
+}
+
+li {
+    margin-bottom: 5px; /* Espace entre les éléments de liste */
+}
+
+strong {
+    font-weight: bold;
+}
+
+#name {
+  font-family: 'Arial', sans-serif; /* Police plus standard pour le nom dans le footer */
+  font-weight: bold;
+  color: #fff; /* Couleur de texte pour le footer */
+  float: right;
+  margin-top: 10px;
+  margin-right: 4%;
+}
+
+a {
+  color: #007bff; /* Couleur de lien standard */
+  text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+@media only screen and (max-width: 768px) { /* Ajuster le breakpoint */
+  .left,
+  .right {
+    display: none;
+  }
+  .stuff {
+    width: 95%; /* Utiliser plus d'espace sur les petits écrans */
+    margin-left: auto; /* Centrer le contenu */
+    margin-right: auto;
+    max-width: 100%; /* Permettre au contenu de prendre toute la largeur disponible */
+  }
+  body {
+    padding-top: 50px; /* Maintenir l'espace pour le header */
+    padding-bottom: 60px; /* Maintenir l'espace pour le footer */
+  }
+}
+
+@media only screen and (max-width: 480px) { /* Breakpoint pour très petits écrans */
+    body {
+        font-size: 14px; /* Réduire la taille de la police pour une meilleure lisibilité */
+    }
+    .stuff {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    h1 {
+        font-size: 1.5em;
+    }
+    h2 {
+        font-size: 1.2em;
+    }
+    .head {
+        font-size: 1.1em;
+    }
+}
